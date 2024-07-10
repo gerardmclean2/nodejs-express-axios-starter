@@ -22,5 +22,5 @@ jobs:
         with:
           node-version: 20.14.0
 
-      - name: Run linter
+      - name: Run build
         run: npm ci
