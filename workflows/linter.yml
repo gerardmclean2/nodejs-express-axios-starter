@@ -1,0 +1,14 @@
+run-name: Run Linter
+
+on:
+  push:
+    branches:
+      - 'main'
+  pull_request:
+    branches:
+      - 'main'
+
+jobs:
+  run_linter_job:
+    name: run linter
+    run: npm run linter
