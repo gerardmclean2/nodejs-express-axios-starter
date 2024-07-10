@@ -9,8 +9,18 @@ on:
       - 'main'
 
 jobs:
-  run_linter_job:
+  run-linter:
+    name: Run linter
     runs-on: ubuntu-latest
+
     steps:
-      - run: npm install
-      - run: npm run linter
+      - name: Check out Git repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 20.14.0
+
+      - name: Run Linter
+        run: npm run linter
