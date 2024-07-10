@@ -12,4 +12,4 @@ jobs:
   run_linter_job:
     runs-on: ubuntu-latest
     steps:
-      run: npm run linter
+      - run: npm run linter
