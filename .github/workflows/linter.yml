@@ -22,5 +22,8 @@ jobs:
         with:
           node-version: 20.14.0
 
-      - name: Run Linter
+      - name: Run npm install
+        run: npm install
+
+      - name: Run linter
         run: npm run linter
