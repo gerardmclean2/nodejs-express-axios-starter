@@ -41,4 +41,4 @@ app.get('/delivery-employee-form', getDeliveryEmployeeForm);
 app.post('/delivery-employee-form', postDeliveryEmployeeForm);
 app.get('/delivery-employee', getAllDeliveryEmployees);
 
-app.get('/delivery-employeee/:id', getSingleDeliveryEmployee);
+app.get('/delivery-employee/:id', getSingleDeliveryEmployee);
