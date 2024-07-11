@@ -1,5 +1,5 @@
 import express from "express";
-import { createDeliveryEmployee, getDeliveryEmployeeByID } from "../services/DeliveryEmployee";
+import { createDeliveryEmployee, getDeliveryEmployees, getDeliveryEmployeeByID } from "../services/DeliveryEmployee";
 
 
 export const getDeliveryEmployeeForm = async (req: express.Request, res: express.Response): Promise<void> => {
@@ -19,3 +19,7 @@ export const postDeliveryEmployeeForm = async (req: express.Request, res: expres
 export const getSingleDeliveryEmployee = async (req: express.Request, res: express.Response): Promise<void> => {
     res.render('deliveryEmployeeDetail.html', { product: await getDeliveryEmployeeByID(req.params.id) });
  }
+
+export const getAllDeliveryEmployees = async (req: express.Request, res: express.Response): Promise<void> => {
+    res.render('deliveryEmployeeList.html', {deliveryEmployees: await getDeliveryEmployees() });
+}

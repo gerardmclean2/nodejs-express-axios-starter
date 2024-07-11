@@ -4,7 +4,7 @@ import bodyParser from "body-parser";
 import session from "express-session";
 
 import { getAllDatabases } from "./controllers/TestController";
-import { getDeliveryEmployeeForm, getSingleDeliveryEmployee, postDeliveryEmployeeForm } from "./controllers/DeliveryEmployeeController";
+import { getAllDeliveryEmployees, getDeliveryEmployeeForm, getSingleDeliveryEmployee, postDeliveryEmployeeForm } from "./controllers/DeliveryEmployeeController";
 
 const app = express();
 
@@ -39,5 +39,6 @@ app.get('/', getAllDatabases);
 
 app.get('/delivery-employee-form', getDeliveryEmployeeForm);
 app.post('/delivery-employee-form', postDeliveryEmployeeForm);
+app.get('/delivery-employee', getAllDeliveryEmployees);
 
 app.get('/delivery-employeee/:id', getSingleDeliveryEmployee);
