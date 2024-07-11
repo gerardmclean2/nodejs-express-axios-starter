@@ -36,5 +36,5 @@ app.listen(3000, () => {
 });
 
 app.get('/', getAllDatabases);
-app.get('/delivery-employee', getDeliveryEmployeeForm);
-app.post('/delivery-employee', postDeliveryEmployeeForm);
+app.get('/delivery-employee-form', getDeliveryEmployeeForm);
+app.post('/delivery-employee-form', postDeliveryEmployeeForm);

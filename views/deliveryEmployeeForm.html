@@ -13,7 +13,7 @@
         <h3>{{ errormessage }}</h3>
     {% endif %}
 
-    <form class="form" action="/deliveryEmployeeForm" method="post">
+    <form class="form" action="/delivery-employee-form" method="post">
         <h3><label for="Name">
             Name:
         </label></h3>
@@ -27,10 +27,10 @@
         <h3><label for="NINO">
             National Insurance Number:
         </label></h3>
-        <input id="NINO" name="NINO" value="{{NINO}}" type="number">
+        <input id="NINO" name="NINO" value="{{NINO}}" type="text">
 
         <h3><label for="Salary">
-            National Insurance Number:
+            Salary:
         </label></h3>
         <input id="Salary" name="Salary" value="{{ Salary }}" type="number">
 
