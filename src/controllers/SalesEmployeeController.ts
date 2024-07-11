@@ -1,4 +1,9 @@
 import express from "express";
+import { getSalesEmployees } from "../services/SalesEmployeeService";
+
+export const getAllSalesEmployees = async (req: express.Request, res: express.Response): Promise<void> => {
+    res.render('salesEmployeeList.html', {salesEmployees: await getSalesEmployees() });
+}import express from "express";
 import { createSalesEmployee } from "../services/SalesEmployeeService";
 
 export const getSalesEmployeeForm = async (req: express.Request, res: express.Response): Promise<void> => {

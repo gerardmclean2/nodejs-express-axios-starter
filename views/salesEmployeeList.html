@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Employees</title>
+</head>
+<body>
+    <h1>Sales Employees</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Salary</th>
+            <th>Bank Account Number</th>
+            <th>National Insurance Number</th>
+            <th>Commission Rate</th>
+        </tr>
+        {% for salesEmployee in salesEmployees %}
+        <tr>
+            <td>{{ salesEmployee.name }}</td>
+            <td>{{ salesEmployee.salary }}</td>
+            <td>{{ salesEmployee.bankAccountNo }}</td>
+            <td>{{ salesEmployee.nino }}</td>
+            <td>{{ salesEmployee.commissionRate }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
