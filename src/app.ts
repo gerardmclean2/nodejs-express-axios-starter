@@ -6,6 +6,7 @@ import session from "express-session";
 import { getAllDatabases } from "./controllers/TestController";
 import { getAllDeliveryEmployees, getDeliveryEmployeeForm, getSingleDeliveryEmployee, postDeliveryEmployeeForm } from "./controllers/DeliveryEmployeeController";
 import { getAllSalesEmployees } from "./controllers/SalesEmployeeController";
+import { getSalesEmployeeForm, postSalesEmployeeForm } from "./controllers/SalesEmployeeController";
 
 const app = express();
 
@@ -44,3 +45,5 @@ app.get('/delivery-employee', getAllDeliveryEmployees);
 
 app.get('/delivery-employee/:id', getSingleDeliveryEmployee);
 app.get('/sales-employee', getAllSalesEmployees);
+app.get('/sales-employee-form', getSalesEmployeeForm);
+app.post('/sales-employee-form', postSalesEmployeeForm);
