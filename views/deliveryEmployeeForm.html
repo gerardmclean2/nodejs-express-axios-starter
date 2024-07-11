@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Delivery Employee</title>
+</head>
+<body>
+    
+    <h1>Create Delivery Employee</h1>
+
+    {% if errormessage %}
+        <h3>{{ errormessage }}</h3>
+    {% endif %}
+
+    <form class="form" action="/deliveryEmployeeForm" method="post">
+        <h3><label for="Name">
+            Name:
+        </label></h3>
+        <input id="Name" name="Name" value="{{ Name }}" type="text">
+
+        <h3><label for="description">
+            Description:
+        </label></h3>
+        <input id="description" name="description" value="{{description}}" type="text">
+
+        <h3><label for="price">
+            Price:
+        </label></h3>
+        <input id="price" name="price" value="{{price}}" type="text">
+
+        <br><br>
+
+        <button id="submit">Submit</button>
+    </form>
+
+</body>
+</html>
